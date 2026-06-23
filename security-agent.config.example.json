@@ -1,0 +1,26 @@
+{
+  "exclude": ["node_modules", "vendor", "dist", "build", ".git", ".next", "coverage"],
+  "severityThreshold": "medium",
+  "reportFormats": ["markdown", "json"],
+  "ai": {
+    "mode": "targeted",
+    "model": "auto",
+    "maxInputTokens": 300000
+  },
+  "scanners": {
+    "semgrep": true,
+    "gitleaks": true,
+    "trufflehog": true,
+    "trivy": true,
+    "grype": true,
+    "npm-audit": true,
+    "composer-audit": true,
+    "built-in": true,
+    "ai-review": true
+  },
+  "jira": {
+    "enabled": false,
+    "issueType": "Task",
+    "status": "In Progress"
+  }
+}

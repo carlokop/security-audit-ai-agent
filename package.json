@@ -1,0 +1,21 @@
+{
+  "name": "security-agent",
+  "version": "0.1.0",
+  "description": "Local AI-assisted security audit orchestrator for Git codebases.",
+  "type": "module",
+  "bin": {
+    "security-agent": "./bin/security-agent.js"
+  },
+  "scripts": {
+    "audit:self": "node ./bin/security-agent.js audit --path . --mode full --ai-mode off",
+    "check": "node --check bin/security-agent.js && node --check src/*.js && node --check src/scanners/*.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@connectrpc/connect-node": "^1.6.1",
+    "@cursor/sdk": "^1.0.18"
+  },
+  "license": "UNLICENSED"
+}
